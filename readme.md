@@ -10,7 +10,7 @@ Parallel.ForEach(sourceCollection, item => Process(item));
 ```
 ## Installation
 ```bash 
-go get -u github.com/adnancukur/GoParallel
+go get -u github.com/adnancukur/goparallel
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Processing in parallel using GoParallel, where maxParallelism is the maximum num
 
 Example 1
 ```go
-GoParallel.ProcessSlice(sourceSlice, processFunction, maxParallelism)
+goparallel.ProcessSlice(sourceSlice, processFunction, maxParallelism)
 ```
 Example 2
 ```go
@@ -45,7 +45,7 @@ sourceSlice := []*TestStruct{
 
 maxParallelism := 5
 
-GoParallel.ProcessSlice(
+goparallel.ProcessSlice(
     sourceSlice, 
     func(testStruct *TestStruct) 
     {
