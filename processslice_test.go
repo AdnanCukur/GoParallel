@@ -15,7 +15,7 @@ func TestProcessSlice_EnsureAllItemsGetProcessed(t *testing.T) {
 		{IHaveBeenProcessed: false},
 	}
 	maxParallelism := 5
-	GoParallel.ProcessSlice(testStructs, func(testStruct *TestStruct) {
+	ProcessSlice(testStructs, func(testStruct *TestStruct) {
 		testStruct.IHaveBeenProcessed = true
 	}, maxParallelism)
 
