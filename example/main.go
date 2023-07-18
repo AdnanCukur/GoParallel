@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/adnancukur/goparallel"
 	"io"
 	"net/http"
 	"net/url"
@@ -38,13 +39,13 @@ func main() {
 
 	// 3 Levels of Parallelism, 8.08 seconds
 	start = time.Now()
-	GoParallel.ProcessSlice(allCountries, getUniversities, 3)
+	goparallel.ProcessSlice(allCountries, getUniversities, 3)
 	elapsed = time.Since(start)
 	fmt.Println("3 Levels of Parallelism run, time took:", elapsed)
 
 	// 6 Levels of Parallelism, 4.42 seconds
 	start = time.Now()
-	GoParallel.ProcessSlice(allCountries, getUniversities, 6)
+	goparallel.ProcessSlice(allCountries, getUniversities, 6)
 	elapsed = time.Since(start)
 	fmt.Println("6 Levels of Parallelism run, time took:", elapsed)
 
