@@ -8,6 +8,8 @@ Inspired by the simplicity of the native Parallel libray in .Net
 ```csharp
 Parallel.ForEach(sourceCollection, item => Process(item));
 ```
+
+This package makes use of generics to allow you to process any type of slice.
 ## Installation
 ```bash 
 go get -u github.com/adnancukur/goparallel
