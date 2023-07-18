@@ -4,6 +4,9 @@ GoParallel is a Go package that provides a convenient way to process a slice in 
 
 Can be useful if you need to post a large number of items to a web service one by one, or in batches, or process a large number of files in a directory and you want to control the level of parallelism to not overload the webservice.
 
+Currently used weekly in production to post hundreds of thousands of items to a third party web service that only allows one item to be posted at a time.
+
+
 Inspired by the simplicity of the native Parallel libray in .Net
 ```csharp
 Parallel.ForEach(sourceCollection, item => Process(item));
