@@ -1,7 +1,6 @@
 package main
 
 import (
-	"GoParallel"
 	"encoding/json"
 	"fmt"
 	"io"

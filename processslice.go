@@ -1,4 +1,4 @@
-package GoParallel
+package goparallel
 
 import (
 	"sync"
