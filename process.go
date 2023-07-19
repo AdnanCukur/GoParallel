@@ -4,11 +4,11 @@ import (
 	"sync"
 )
 
-// ProcessSlice processes a slice in parallel using specified maximum parallelism.
+// Process processes a slice in parallel using specified maximum parallelism.
 // The slice parameter is the input slice to be processed.
 // It takes a processFunction that defines the processing logic for each item in the slice.
 // The maxParallelism parameter specifies the maximum number of goroutines running in parallel.
-func ProcessSlice[T interface{}](slice []*T, processFunction func(*T), maxParallelism int) {
+func Process[T interface{}](slice []*T, processFunction func(*T), maxParallelism int) {
 	var wg sync.WaitGroup
 	wg.Add(len(slice))                         // Increment the WaitGroup counter.
 	limiter := make(chan bool, maxParallelism) // Create a buffered channel to limit the number of parallel goroutines.

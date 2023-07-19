@@ -39,13 +39,13 @@ func main() {
 
 	// 3 Levels of Parallelism, 8.08 seconds
 	start = time.Now()
-	goparallel.ProcessSlice(allCountries, getUniversities, 3)
+	goparallel.Process(allCountries, getUniversities, 3)
 	elapsed = time.Since(start)
 	fmt.Println("3 Levels of Parallelism run, time took:", elapsed)
 
 	// 6 Levels of Parallelism, 4.42 seconds
 	start = time.Now()
-	goparallel.ProcessSlice(allCountries, getUniversities, 6)
+	goparallel.Process(allCountries, getUniversities, 6)
 	elapsed = time.Since(start)
 	fmt.Println("6 Levels of Parallelism run, time took:", elapsed)
 

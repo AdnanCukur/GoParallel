@@ -20,18 +20,12 @@ go get -u github.com/adnancukur/goparallel
 
 ## Usage
 
-Example of regular sequential processing without GoParallel
-```go
-for _, item := range sourceSlice {
-    processFunction(item)
-}
-```
 
 Processing in parallel using GoParallel, where maxParallelism is the maximum number of goroutines to run concurrently
 
 Example 1
 ```go
-goparallel.ProcessSlice(sourceSlice, processFunction, maxParallelism)
+goparallel.Process(sourceSlice, processFunction, maxParallelism)
 ```
 Example 2
 ```go
@@ -50,7 +44,7 @@ sourceSlice := []*TestStruct{
 
 maxParallelism := 5
 
-goparallel.ProcessSlice(
+goparallel.Process(
     sourceSlice, 
     func(testStruct *TestStruct) 
     {
